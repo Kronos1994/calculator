@@ -1,0 +1,72 @@
+.calculator {
+  width: 350px;
+  margin: 50px auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: black; /* Changed background color to black */
+  border-style: ridge;
+}
+
+.calculator input,
+.calculator textarea {
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.calculator .history {
+  height: 100px;
+  resize: none;
+}
+
+.calculator .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.calculator .buttons button {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Added transition effects */
+  border-radius: 8px; /* Added border-radius for smoother edges */
+}
+
+.calculator .buttons button:hover,
+.calculator .buttons.keyboard-active button:hover {
+  background-color: #e0e0e0;
+}
+
+.calculator .buttons button:active,
+.calculator .buttons.keyboard-active button:active {
+  background-color: #d9d9d9;
+}
+
+.calculator .buttons button.operator {
+  background-color: #f0f0f0;
+}
+
+.calculator .buttons button.operator:hover,
+.calculator .buttons.keyboard-active button.operator:hover {
+  background-color: #e0e0e0;
+}
+
+.calculator .buttons button.operator:active,
+.calculator .buttons.keyboard-active button.operator:active {
+  background-color: #d9d9d9;
+}
+
+.calculator .buttons button.last {
+  grid-column: span 2;
+}
+
+.calculator .buttons button:focus {
+  outline: none;
+  box-shadow: 0 0 10px #ccc; /* Added box-shadow effect */
+}
